@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<input type="text" id="ngoisao">
+<button onclick="star()">Check</button>
+<p id="result"></p>
+<script>
+    function star(){
+        let sao = ["Polaris" , "Aldebaran" , "Deneb" , "Vega" , "Altair" , "Dubhe" , "Regulus"];
+        let chomsao = ["Ursa Minor" , "Taurus" , "Cygnus" , "Lyra" , "Aquila" , "Ursa Major" , "Leo"];
+        let inputsao = document.getElementById("ngoisao").value;
+        let result = "Không tìm thấy";
+        for (let i = 0; i < sao.length ; i++){
+            if (sao[i] === inputsao){
+                result = sao[i] + " = " + chomsao[i];
+                break;
+            }
+        }
+        document.getElementById("result").innerText = result;
+    }
+</script>
+</body>
+</html>

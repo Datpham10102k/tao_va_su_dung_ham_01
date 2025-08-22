@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<input type="number" id="numb">
+<button onclick="tinhtoan()">Tính</button>
+<p id="sodau"></p>
+<p id="tong"></p>
+<script>
+    function getso (so){
+        return so + 1;
+    }
+    function tinhtoan(){
+    let so = parseInt(document.getElementById("numb").value);
+    let giatri = getso(so);
+    document.getElementById('sodau').innerText = `Số ban đầu là: ${so}`;
+    document.getElementById("tong").innerText = `Số sau khi thêm là: ${giatri} `;
+    }
+</script>
+</body>
+</html>
